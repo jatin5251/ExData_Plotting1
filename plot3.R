@@ -16,7 +16,7 @@ eda_data_sample <- eda_data[eda_data$Date>="2007-02-01"&eda_data$Date<="2007-02-
 ##Adding new column containg both date and time
 eda_data_sample$DateTime <- as.POSIXct(paste(eda_data_sample$Date,eda_data_sample$Time))
 
-##converting Global_active_power filed into numeric
+##converting Sub_metering fields into numeric
 eda_data_sample$Sub_metering_1 <- as.numeric(eda_data_sample$Sub_metering_1)
 eda_data_sample$Sub_metering_2 <- as.numeric(eda_data_sample$Sub_metering_2)
 eda_data_sample$Sub_metering_3 <- as.numeric(eda_data_sample$Sub_metering_3)
